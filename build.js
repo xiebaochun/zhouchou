@@ -2,7 +2,15 @@ var fs = require('fs');
 var path = require('path');
 require(`shelljs/global`);
 
-compile('./src/tpl');
+module.exports = build;
+
+function build(){
+	exec('cp -r ./src/css ./dest');
+	exec('cp -r ./src/js ./dest');
+	compile('./src/tpl');
+}
+
+
 
 function compile(dir){
 	var files = fs.readdirSync(dir);
