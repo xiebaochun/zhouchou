@@ -583,3 +583,5 @@ th {
 .clear-fixed{
   
 }
+
+.bg-center{background-size: cover;background-position: center center;}

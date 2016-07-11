@@ -7,6 +7,7 @@ module.exports = build;
 function build(){
 	exec('cp -r ./src/css ./dest');
 	exec('cp -r ./src/js ./dest');
+	exec('cp -r ./src/favicon.ico ./dest');
 	compile('./src/tpl');
 }
 
