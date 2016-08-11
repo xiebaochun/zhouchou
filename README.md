@@ -2,9 +2,9 @@
 
 ## usage
 
-`git clone https://github.com/xiebaochun/static_website_generator.git'
+`git clone https://github.com/xiebaochun/static_website_generator.git` 
 
-`cd static_website_generator` 
+`cd static_website_generator` folder
 
 `npm install`
 
