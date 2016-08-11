@@ -8,12 +8,12 @@
 
 `npm install`
 
+## generate
 Use fellow command to generate the staic pages from src folder.
 
 `node publish`
 
 ## test
-
 Use bellow to start a web server powered bt express, you can access it in locahost:3000 in browser.
 
 `node server`
