@@ -1,13 +1,16 @@
 # static website generator
 
 ## usage
+
 `git clone https://github.com/xiebaochun/static_website_generator.git'
-`cd static_website_generator`
+
+`cd static_website_generator` 
+
 `npm install`
 
 Use fellow command to generate the staic pages from src folder.
 
-`node publish'
+`node publish`
 
 ## test
 
