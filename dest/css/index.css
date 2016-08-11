@@ -1,9 +1,0 @@
-.banner{
-	height:250px;
-	margin-bottom:10px;
-	background-position: center -80px;
-}
-
-@media screen and (max-width:1000px){
-  .banner{height:180px;height:40vw;}
-}
