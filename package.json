@@ -18,9 +18,17 @@
   "homepage": "https://github.com/xiebaochun/xiebaochun.github.io#readme",
   "dependencies": {
     "bower": "^1.7.9",
+    "dateformat": "^1.0.12",
+    "end-of-stream": "^1.1.0",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "has-gulplog": "^0.1.0",
+    "lodash.template": "^4.4.0",
+    "multipipe": "^1.0.2",
+    "orchestrator": "^0.3.8",
     "shelljs": "^0.7.0",
+    "vinyl": "^2.0.1",
     "webpack": "^1.13.1"
   },
   "devDependencies": {},
