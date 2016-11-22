@@ -11,3 +11,8 @@ if (exec(`git push origin master`).code !== 0) {
 }
 echo(`------------ master updated`);
 cd('..');
+if(exec('node push').code !==0){
+	echo('push failed');
+	exit(1);
+};
+echo('back up source branch success');
