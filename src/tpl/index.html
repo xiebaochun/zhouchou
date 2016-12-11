@@ -1,5 +1,56 @@
 <%- include('inc/head') %>
-<%- include('inc/header') %>  
-  <link rel="stylesheet" type="text/css" href="./css/index.css">
-  	
+<link rel="stylesheet" type="text/css" href="./css/index.css">
+<header class="bar bar-nav">
+    <a class="button button-link button-nav pull-left" href="/demos/card" data-transition='slide-out'>
+        <span class="icon icon-me"></span>
+    </a>
+    <h1 class="title">一点科技 商业联盟</h1>
+    <a class="button button-link button-nav pull-right" href="/demos/card" data-transition='slide-out'>
+        <span class="icon icon-menu"></span>
+    </a>
+</header>
+<div class="content">
+    <div class="main-bg-1 f1 color-fff" style="padding:0.1rem 0;overflow:hidden;">
+        <span id="top-tips" style="white-space:nowrap;">欢迎你积极参与.......................</span>
+    </div>
+    <div>
+        <!-- Slider -->
+        <div class="swiper-container" data-space-between='0'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide main-bg-1">
+                  
+                </div>
+                <div class="swiper-slide main-bg-2">
+                  
+                </div>
+                <div class="swiper-slide main-bg-1">
+                  
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+<%- include('inc/js_load') %> 
+<script type="text/javascript">
+  $(function(){
+    var $top_tips = $('#top-tips');
+    top_tips_width = $top_tips.width();
+    console.log($top_tips.position().left);
+    var w = $('body').width();
+    $top_tips.css({'margin-left':w + 'px'});
+    console.log($('body').width());
+    setInterval(function(){
+      //console.log($top_tips.css('margin-left'));
+      var left = parseInt($top_tips.css('margin-left').replace('px',''));
+      if(left < -top_tips_width){
+        left = w;
+      }else{
+        left -= 1;
+      }
+      $top_tips.css({'margin-left':left+'px'});  
+    },100);
+        $(".swiper-container").swiper();
+  });
+</script>
 <%- include('inc/footer') %> 
