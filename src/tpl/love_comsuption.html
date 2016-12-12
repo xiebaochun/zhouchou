@@ -1,0 +1,39 @@
+<%- include('inc/head') %>
+<link rel="stylesheet" type="text/css" href="./css/love_comsuption.css">
+<header class="bar bar-nav bg-cover main-bg-1">
+    <h1 class="title color-fff">爱心消费<span class="icon icon-down"></span></h1>
+</header>
+<div class="content">
+	<div class="buttons-tab">
+	    <a href="#tab1" class="tab-link active button">全部</a>
+	    <a href="#tab2" class="tab-link button">待付款</a>
+	    <a href="#tab3" class="tab-link button">待发货</a>
+	  </div>
+	  <div class="content-block">
+	    <div class="tabs">
+	      <div id="tab1" class="tab active">
+	        <img class="w-100" src="./img/mylove_bg.png">
+	        <div class="content-block">
+	          <p>This is tab 1 content</p>
+	          <div class="tips-wrap">
+	          	<img src="./img/pic_nodata.png"><br>
+	          	<span>(T_T)对不起，没有数据啦！</span>
+	          </div>
+	        </div>
+	      </div>
+	      <div id="tab2" class="tab">
+	        <div class="content-block">
+	          <p>This is tab 2 content</p>
+	        </div>
+	      </div>
+	      <div id="tab3" class="tab">
+	        <div class="content-block">
+	          <p>This is tab 3 content</p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+</div>
+<%- include('inc/bottom_nav') %> 
+<%- include('inc/js_load') %> 
+<%- include('inc/footer') %>

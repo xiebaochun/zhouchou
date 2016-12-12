@@ -1,19 +1,24 @@
 <%- include('inc/head') %>
 <link rel="stylesheet" type="text/css" href="./css/index.css">
-<header class="bar bar-nav">
-    <a class="button button-link button-nav pull-left" href="/demos/card" data-transition='slide-out'>
-        <span class="icon icon-me"></span>
+<header class="bar bar-nav bg-cover">
+    <a class="button button-link button-nav pull-left" href="./uc_index.html" data-transition='slide-out'>
+        <div class="tc" style="line-height: 0.6rem;">
+            <img style="width:1rem;margin-top:0.2rem;" src="./img/icon_head.png"><br>
+            <span class="user-name f1 color-fff">username</span>
+            <!-- <span class="icon icon-me"></span> -->
+        </div>
     </a>
-    <h1 class="title">一点科技 商业联盟</h1>
+    <h1 class="title color-fff">一点科技 商业联盟</h1>
     <a class="button button-link button-nav pull-right" href="/demos/card" data-transition='slide-out'>
-        <span class="icon icon-menu"></span>
+        <!-- <span class="icon icon-menu"></span> -->
+        <img class="vm" style="height:40%;margin-right:0.3rem;" src="./img/main_more.png">
     </a>
 </header>
 <div class="content">
     <div class="main-bg-1 f1 color-fff" style="padding:0.1rem 0;overflow:hidden;">
         <span id="top-tips" style="white-space:nowrap;">欢迎你积极参与.......................</span>
     </div>
-    <div>
+    <div >
         <!-- Slider -->
         <div class="swiper-container" data-space-between='0'>
             <div class="swiper-wrapper">
@@ -21,13 +26,37 @@
                   
                 </div>
                 <div class="swiper-slide main-bg-2">
-                  
+                    <div style="height:0.3rem;"></div>
+                    <span class="l2 color-red">全联盟昨日消费</span>
+                    <div class="comsuption tc">
+                        <img style="height: 0.6rem;display: inline-block;" src="./img/main_star1.png"><br>
+                        <span class="amount color-red">0.0元</span>
+                    </div>
+                    <div class="comsuption tc">
+                        <img style="height: 0.6rem;display: inline-block;" src="./img/main_star2.png"><br>
+                        <span class="amount color-red">0.0元</span>
+                    </div>
+                    <div class="comsuption tc">
+                        <img style="height: 0.6rem;display: inline-block;" src="./img/main_star3.png"><br>
+                        <span class="amount color-red">0.0元</span>
+                    </div>
                 </div>
                 <div class="swiper-slide main-bg-1">
                   
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="bottom-nav tc">
+        <img style="width:70%;margin-top:1rem;" src="./img/main_sologen.png">
+        <div class="tc">
+            <div class="center-line"></div>
+            <img style="position:relative;width:20%;z-index: 2;" src="./img/main_bottom_logo.png">
+        </div>
+        <div class="row">
+          <div class="col-33"><a href=""><img style="width:60%;" src="./img/main_ydsc.png"></a></div>
+          <div class="col-33"><a href=""><img style="width:60%;" src="./img/main_ydsc.png"></a></div>
+          <div class="col-33"><a href=""><img style="width:60%;" src="./img/main_ydsc.png"></a></div>
         </div>
     </div>
 </div>
@@ -36,10 +65,10 @@
   $(function(){
     var $top_tips = $('#top-tips');
     top_tips_width = $top_tips.width();
-    console.log($top_tips.position().left);
+    //console.log($top_tips.position().left);
     var w = $('body').width();
     $top_tips.css({'margin-left':w + 'px'});
-    console.log($('body').width());
+    //console.log($('body').width());
     setInterval(function(){
       //console.log($top_tips.css('margin-left'));
       var left = parseInt($top_tips.css('margin-left').replace('px',''));
@@ -50,7 +79,10 @@
       }
       $top_tips.css({'margin-left':left+'px'});  
     },100);
-        $(".swiper-container").swiper();
+        $(".swiper-container").swiper({
+            autoplay:5000,
+            effect:'cube'
+        });
   });
 </script>
 <%- include('inc/footer') %> 
