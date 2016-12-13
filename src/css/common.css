@@ -1,4 +1,17 @@
+/* @site style reset start*/
+html,body,ul,li{margin:0;padding:0;}
+ul > li{
+	display: block;
+	list-style: none;
+}
+/* @site style reset end */
 /* @site base style start */
+.block{display: block !important;}
+.inline-block{display: inline-block !important;}
+.inline{display: inline !important;}
+
+.none{display: none;}
+
 .rl{
 	position: relative;
 }
@@ -6,16 +19,37 @@
 	position: absolute;
 }
 
+.w-50{
+	width:50%;
+}
+.w-70{
+	width:70%;
+}
 .w-100{
 	width: 100%;
 }
+.w1{
+	width: 1rem;
+}
+
+
 .h-100{
 	height: 100%;
+}
+.h1-2{
+	height: 0.5rem;
+}
+.h1{
+	height: 1rem;
 }
 
 .blank-1{height:1rem;}
 .blank-2{height:2rem;}
 .blank-3{height:3rem;}
+
+.p1{
+	padding:1rem;
+}
 
 .vm{vertical-align: middle;}
 
@@ -45,6 +79,13 @@
 .main-bg-2{
 	background-color: #cccc66;
 }
+.main-bg-3{
+	background-color: #dddd99;
+}
+
+.bg-fff{
+	background-color: #fff;
+}
 /*.bg-red{
 	background-color: #cc2222;
 }*/
@@ -56,8 +97,17 @@
 .f1{
 	font-size:0.7rem;
 }
+.f2{
+	font-size:1rem;
+}
 
 .tc{text-align: center;}
+.tl{text-align: left;}
+
+.fw-normal{font-weight: normal;}
+
+/*溢出省略*/
+.nowrap{display: block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 
 .crearfix:after{
 	content:'';

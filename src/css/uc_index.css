@@ -16,8 +16,25 @@
 	background:none !important;
 	color:#fff;
 }
+.user-info .list-block .item-content{
+	min-height:1.3rem;
+}
+.user-info .list-block .item-inner{
+	padding-top:0rem !important; 
+	padding-bottom:0rem !important; 
+	min-height: 1.3rem;
+}
 .user-info .list-block .item-inner:after{
 
+}
+.middle-nav .row{
+	border-top: 1px solid #ccc;
+}
+.middle-nav .row .col-50:first-child{
+	border-right: 1px solid #ddd;
+}
+.middle-nav .row .col-50 a{
+	display: block;
 }
 .middle-nav .col-50{
 	padding:1rem 0;

@@ -7,7 +7,7 @@ header.bar-nav{
 }
 .swiper-container{
 	top:3rem;
-	height: 14rem !important;
+	height: 16rem !important;
 	width:12rem !important;
 }
 .swiper-slide{
@@ -39,4 +39,36 @@ header.bar-nav{
 	border: 1px solid #ee3333;
 	border-radius: 0.3rem;
 	background-color: #fff;
+}
+
+.swiper-slide .first-item{
+	display: inline-block;
+	padding:0.8rem;
+	width:85%;
+	border-bottom: 1px dashed #fff;
+}
+
+.love-value-item{
+	display: inline-block;
+	width:80%;
+	border-radius: 0.5rem;
+	background-color: #eeeecc;
+}
+.love-value-item .col-30{
+	border-right:1px dashed #cc2222;
+}
+.more-nav{
+	position: fixed;
+	right:0.1rem;
+	top:2rem;
+	width:3.5rem;
+	padding:0.5rem 0;
+	background-color: rgba(0,0,0,0.3);
+	border-radius:0.5rem;
+}
+.more-nav > div{
+	margin-top:0.3rem;
+}
+.more-nav span{
+	color:#cccc55;
 }
