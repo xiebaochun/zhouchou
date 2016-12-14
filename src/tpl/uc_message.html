@@ -1,0 +1,90 @@
+<%- include('inc/head') %>
+<style type="text/css">
+	header .active{}
+	.msg-item{
+		padding: 0.5rem;
+		border-bottom:1px solid #eee;
+		background-color: #fff;
+	}
+	.content-block{
+		margin:0;
+		padding:0;
+	}
+	.msg-footer{
+		margin-top:0.3rem;
+		text-align:right;
+	}
+	.msg-tag{
+		margin-right:0.3rem;
+		padding: 0  0.2rem;
+		color:#ee6666;
+		border:1px solid #ee6666;
+		border-radius:0.1rem;
+	}
+</style>
+<header class="bar bar-nav bg-cover main-bg-1">
+	<a class="button button-link button-nav pull-left back">
+        <span class="icon icon-left color-fff"></span>
+    </a>
+    <h1 class="title color-fff">我的消息</h1>
+</header>
+<div class="content">
+    <div class="buttons-tab">
+        <a href="#tab1" class="tab-link active button">全部</a>
+        <a href="#tab2" class="tab-link button">消息</a>
+        <a href="#tab3" class="tab-link button">回购</a>
+        <a href="#tab4" class="tab-link button">通知</a>
+    </div>
+    <div class="content-block">
+        <div class="tabs">
+            <div id="tab1" class="tab active">
+                <div class="content-block">
+                	<div class="msg-wrap">
+                		<!-- message list start -->
+                		<div class="msg-item">
+                			<div class="msg-content">
+                				这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息
+                			</div>
+                			<div class="msg-footer">
+                				<span class="msg-tag">通知消息</span>
+                				<span class="msg-create-time">2016-12-11 20:52:59</span>
+                			</div>
+                		</div>
+                		<div class="msg-item">
+                			<div class="msg-content">
+                				这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息这是消息
+                			</div>
+                			<div class="msg-footer">
+                				<span class="msg-tag">通知消息</span>
+                				<span class="msg-create-time">2016-12-11 20:52:59</span>
+                			</div>
+                		</div>
+                		<!-- message list end -->
+                	</div>
+                </div>
+            </div>
+            <div id="tab2" class="tab">
+                <div class="content-block">
+                    <p>This is tab 2 content</p>
+                </div>
+            </div>
+            <div id="tab3" class="tab">
+                <div class="content-block">
+                    <p>This is tab 3 content</p>
+                </div>
+            </div>
+            <div id="tab4" class="tab">
+                <div class="content-block">
+                    <p>This is tab 4 content</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('inc/js_load') %> 
+<script type="text/javascript">
+	$(function(){
+		
+	});
+</script>
+<%- include('inc/footer') %>

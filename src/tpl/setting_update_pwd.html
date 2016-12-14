@@ -1,0 +1,69 @@
+<%- include('inc/head') %>
+<header class="bar bar-nav bg-cover main-bg-1">
+	<a class="button button-link button-nav pull-left back">
+        <span class="icon icon-left color-fff"></span>
+    </a>
+    <h1 class="title color-fff">登录密码</h1>
+</header>
+<div class="content">
+	<form id="save-form" action="" target="">
+		<div style="height: 0.5rem;"></div>
+	    <div class="list-block">
+	        <ul>
+	            <!-- Text inputs -->
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-email"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">原密码</div>
+	                        <div class="item-input">
+	                            <input id="origin-pwd" type="password" placeholder="请输入原密码">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">新密码</div>
+	                        <div class="item-input">
+	                            <input id="new-pwd" type="password" placeholder="请输入新密码" class="">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">确认密码</div>
+	                        <div class="item-input">
+	                            <input id="new-pwd2" type="password" placeholder="请再次输入新密码" class="">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="content-block">
+	        <div class="row">
+	            <div class="col-100"><a href="#" class="button button-big button-fill" id="save-btn">保存</a></div>
+	        </div>
+	    </div>
+	</form>
+</div>
+<%- include('inc/js_load') %> 
+<script type="text/javascript">
+	$(function(){
+		$('#save-btn').click(function(){
+			// verify
+			if(!$trim($('#origin-pwd'))){
+				$.toast('请输入原密码');
+			}else if(!trim($('#new-pwd'))){
+				$.toast('请输入原密码');
+			}
+		});
+	});
+</script>
+<%- include('inc/footer') %> 

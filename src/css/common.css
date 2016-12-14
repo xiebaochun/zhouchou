@@ -119,6 +119,13 @@ ul > li{
 /*---------------------------------------*/
 
 /* @site common style start */
+a{
+	color: #333;
+}
+a.active{
+	color: #cc2222 !important;
+	border-color: #cc2222 !important;
+}
 .bar-tab .active *{
 	color:#cc2222 !important;
 }
@@ -129,5 +136,8 @@ ul > li{
 .tips-wrap img{
 	width:20%;
 }
+.list-block{margin-top: 0 !important;}
+.list-block a{display: block;width:100%;}
+.item-inner{margin-left: 0 !important;}
 /* @site common style end 
 /*---------------------------------------*/
