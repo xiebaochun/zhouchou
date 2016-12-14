@@ -1,0 +1,109 @@
+<%- include('inc/head') %>
+<header class="bar bar-nav bg-cover main-bg-1">
+	<a class="button button-link button-nav pull-left back">
+        <span class="icon icon-left color-fff"></span>
+    </a>
+    <h1 class="title color-fff">二级密码</h1>
+</header>
+<div class="content">
+	<form id="save-form" action="" target="">
+		<div style="height: 0.5rem;"></div>
+	    <div class="list-block">
+	        <ul>
+	            <!-- Text inputs -->
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-email"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">原二级密码</div>
+	                        <div class="item-input">
+	                            <input id="origin-pwd" type="password" placeholder="请输入原密码">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">新二级密码</div>
+	                        <div class="item-input">
+	                            <input id="new-pwd" type="password" placeholder="请输入新密码" class="">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">确认二级密码</div>
+	                        <div class="item-input">
+	                            <input id="new-pwd2" type="password" placeholder="请再次输入新密码" class="">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">短信验证码</div>
+	                        <div class="item-input">
+	                            <input id="verify-code" type="text" placeholder="请输入验证码" class="">
+	                        </div>
+	                        <a class="button button-small button-fill" href="javascript:" id="get-verify-code">获取验证码</a>
+	                    </div>
+	                </div>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="content-block">
+	        <div class="row">
+	            <div class="col-100"><a href="javascript:" class="button button-big button-fill" id="save-btn">保存</a></div>
+	        </div>
+	    </div>
+	</form>
+</div>
+<%- include('inc/js_load') %> 
+<script type="text/javascript">
+	$(function(){
+		$('#save-btn').click(function(){
+			// verify
+			if(!$trim($('#origin-pwd'))){
+				$.toast('请输入原二级密码');
+				return false;
+			}else if(!$.trim($('#new-pwd'))){
+				$.toast('请输入新二级密码');
+				return false;
+			}else if(!$.trim($('#new-pwd2'))){
+				$.toast('请再次输入新二级密码');
+				return false;
+			}else if(!$.trim($('#new-pwd')) != !$.trim($('#new-pwd2'))){
+				$.toast('两次输入的二级密码不一致');
+				return false;
+			}
+			$('#save-form').submit();
+		});
+		// get verify code
+		$('#get-verify-code').click(function(){
+			var verify_code = $.trim($('#verify-code').val());
+			if(!verify_code){
+				$.toas('请输入验证码');
+				return false;
+			}
+			$.ajax({
+				url:'',
+				method:'post',
+				dataType:'json',
+				data:{
+					code: verify_code,
+				},
+				success:function( ret ){
+
+				}
+			});
+		});
+	});
+</script>
+<%- include('inc/footer') %> 

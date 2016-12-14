@@ -60,9 +60,18 @@
 			// verify
 			if(!$trim($('#origin-pwd'))){
 				$.toast('请输入原密码');
-			}else if(!trim($('#new-pwd'))){
-				$.toast('请输入原密码');
+				return false;
+			}else if(!$.trim($('#new-pwd'))){
+				$.toast('请输入新密码');
+				return false;
+			}else if(!$.trim($('#new-pwd2'))){
+				$.toast('请再次输入新密码');
+				return false;
+			}else if(!$.trim($('#new-pwd')) != !$.trim($('#new-pwd2'))){
+				$.toast('两次输入的密码不一致');
+				return false;
 			}
+			$('#save-form').submit();
 		});
 	});
 </script>
