@@ -162,16 +162,16 @@
 	  	});
 		$('#save-btn').click(function(){
 			// verify
-			if(!$trim($('#mobile'))){
+			if(!$trim($('#mobile').val())){
 				$.toast('请输入手机号码');
 				return false;
-			}else if(!$.trim($('#new-pwd'))){
+			}else if(!$.trim($('#new-pwd').val())){
 				$.toast('请输入新密码');
 				return false;
-			}else if(!$.trim($('#new-pwd2'))){
+			}else if(!$.trim($('#new-pwd2').val())){
 				$.toast('请再次输入新密码');
 				return false;
-			}else if(!$.trim($('#new-pwd')) != !$.trim($('#new-pwd2'))){
+			}else if(!$.trim($('#new-pwd').val()) != !$.trim($('#new-pwd2').val())){
 				$.toast('两次输入的密码不一致');
 				return false;
 			}

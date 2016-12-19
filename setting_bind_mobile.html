@@ -75,7 +75,7 @@
 	$(function(){
 		$('#save-btn').click(function(){
 			// verify
-			if(!$.trim($('#mobile'))){
+			if(!$.trim($('#mobile').val())){
 				$.toast('请输入手机号码');
 				return false;
 			}
