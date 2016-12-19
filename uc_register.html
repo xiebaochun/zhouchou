@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的生活</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+
+  </head>
+  <body>
+    <div class="page-group">
+        <div class="page page-current">
+<link rel="stylesheet" type="text/css" href="./css/login.css">
+<header class="bar bar-nav bg-cover main-bg-1">
+	<a class="button button-link button-nav pull-left back">
+        <span class="icon icon-left color-fff"></span>
+    </a>
+    <h1 class="title color-fff">注册</h1>
+</header>
+<div class="content">
+	<form id="login-form" action="" target="">
+	    <div class="tc" style="padding:1rem 0 0 0;">
+	        <img class="" style="width:70%;" src="./img/regist_logo.png">
+	    </div>
+	    <div class="list-block">
+	        <ul>
+	            <!-- Text inputs -->
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-name"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">类型</div>
+	                        <div class="item-input">
+	                            <input type="text" placeholder="请选择注册类型" id='picker'>
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-email"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">账号</div>
+	                        <div class="item-input">
+	                            <input id="account" type="text" placeholder="手机号码/用户ID">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">手机号码</div>
+	                        <div class="item-input">
+	                            <input id="mobile" type="text" placeholder="请输入手机号码" class="">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">短信验证码</div>
+	                        <div class="item-input">
+	                            <input id="verify-code" type="text" placeholder="请输入验证码" class="">
+	                        </div>
+	                        <a class="button button-small button-fill" href="javascript:" id="get-verify-code">获取验证码</a>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">密码</div>
+	                        <div class="item-input">
+	                            <input id="password" type="password" placeholder="" class="">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">确认密码</div>
+	                        <div class="item-input">
+	                            <input id="new-pwd2" type="password" placeholder="请再次输入新密码" class="">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	        </ul>
+	        <div class="h1"></div>
+	        <div class="tc"><input type="checkbox" name="agree-protocol" id="agree-protocol"><label for="agree-protocol color-blue">点击查看<a class="inline" href="./uc_register_protocol.html">《注册协议》</a></label></div>
+	    </div>
+	    <div class="content-block">
+	        <div class="row">
+	            <div class="col-100"><a href="#" class="button button-big button-fill" id="login-btn">注册</a></div>
+	        </div>
+	    </div>
+	</form>
+
+	<div class="ps tc w-100" style="bottom:0.5rem;">
+		<img style="width:70%;" src="./img/regist_bottom.png">
+	</div>
+</div>
+		</div>
+	</div>
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script type="text/javascript" src="./js/common.js"></script> 
+<script type="text/javascript">
+	$(function(){
+		var $login_form = $('#login-form');
+		$login_form.on('tap','#login-btn', function(){
+			if($.trim($('#account').val()) == ''){
+				$.toast("请输入账号");
+			}else if($.trim($('#password').val()) == ''){
+				$.toast("请输入密码");
+			}
+			$.toast('hhh');
+		});
+		$("#picker").picker({
+		  toolbarTemplate: '<header class="bar bar-nav">\
+		  <button class="button button-link pull-right close-picker">确定</button>\
+		  <h1 class="title">登录类型</h1>\
+		  </header>',
+		  cols: [
+		    {
+		      textAlign: 'center',
+		      values: ['信使', '信使', '信使', '信使']
+		    }
+		  ]
+		});
+	});
+</script>
+
+  	</body>
+</html>

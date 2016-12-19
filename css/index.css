@@ -1,0 +1,80 @@
+header.bar-nav{
+	background-image:url(../img/main_title_bg.png);
+}
+.content{
+	background-image: url(../img/main_center_bg.jpg);
+	background-size: 150% 80%;
+}
+.swiper-container{
+	top:3rem;
+	height: 16rem !important;
+	width:12rem !important;
+}
+.swiper-slide{
+	text-align: center;
+}
+.bottom-nav{
+	position: fixed;
+	height:9rem;
+	width:100%;
+	bottom:0;
+	text-align: center;
+	background-image: url(../img/main_bottom_bg.png);
+	background-size: 100%;
+}
+.center-line{
+	position: absolute;
+	width:100%;
+	left: 0;
+	top: 4.5rem;
+	height: 0.1rem;
+	background-color:#eeee88;
+	z-index: 0;
+}
+.comsuption{
+	display: inline-block;
+	width:80%;
+	margin-top: 0.3rem;
+	padding: 0.1rem 0 0 0;
+	border: 1px solid #ee3333;
+	border-radius: 0.3rem;
+	background-color: #fff;
+}
+
+.swiper-slide .first-item{
+	display: inline-block;
+	padding:0.8rem;
+	width:85%;
+	border-bottom: 1px dashed #fff;
+}
+
+.love-value-item{
+	display: inline-block;
+	width:80%;
+	border-radius: 0.5rem;
+	background-color: #eeeecc;
+}
+.love-value-item .col-30{
+	border-right:1px dashed #cc2222;
+}
+.more-nav{
+	position: fixed;
+	right:0.1rem;
+	top:2rem;
+	width:3.5rem;
+	padding:0.5rem 0;
+	background-color: rgba(0,0,0,0.3);
+	border-radius:0.5rem;
+}
+.more-nav > div{
+	margin-top:0.3rem;
+}
+.more-nav span{
+	color:#cccc55;
+}
+#bottom-nav{
+	position: fixed;
+	bottom: -0.8rem;
+	left: 0;
+	width: 100%;
+}
