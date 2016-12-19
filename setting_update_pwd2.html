@@ -96,7 +96,7 @@
 	$(function(){
 		$('#save-btn').click(function(){
 			// verify
-			if(!$trim($('#origin-pwd'))){
+			if(!$.trim($('#origin-pwd'))){
 				$.toast('请输入原二级密码');
 				return false;
 			}else if(!$.trim($('#new-pwd'))){

@@ -96,7 +96,7 @@
 	$(function(){
 		$('#save-btn').click(function(){
 			// verify
-			if(!$trim($('#mobile'))){
+			if(!$.trim($('#mobile'))){
 				$.toast('请输入手机号码');
 				return false;
 			}else if(!$.trim($('#new-pwd'))){

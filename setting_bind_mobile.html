@@ -75,7 +75,7 @@
 	$(function(){
 		$('#save-btn').click(function(){
 			// verify
-			if(!$trim($('#mobile'))){
+			if(!$.trim($('#mobile'))){
 				$.toast('请输入手机号码');
 				return false;
 			}
@@ -85,7 +85,7 @@
 		$('#get-verify-code').click(function(){
 			var verify_code = $.trim($('#verify-code').val());
 			if(!verify_code){
-				$.toas('请输入验证码');
+				$.toast('请输入验证码');
 				return false;
 			}
 			$.ajax({
