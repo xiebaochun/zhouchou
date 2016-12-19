@@ -1,38 +1,25 @@
 <%- include('inc/head') %>
-<link rel="stylesheet" type="text/css" href="./css/login.css">
 <header class="bar bar-nav bg-cover main-bg-1">
 	<a class="button button-link button-nav pull-left back">
         <span class="icon icon-left color-fff"></span>
     </a>
-    <h1 class="title color-fff">注册</h1>
+    <h1 class="title color-fff">忘记密码</h1>
 </header>
 <div class="content">
-	<form id="login-form" action="" target="">
-	    <div class="tc" style="padding:1rem 0 0 0;">
-	        <img class="" style="width:70%;" src="./img/regist_logo.png">
-	    </div>
+	<form id="save-form" action="" target="">
+		<div style="height: 0.5rem;"></div>
 	    <div class="list-block">
 	        <ul>
 	            <!-- Text inputs -->
 	            <li>
-	                <div class="item-content">
+	                <div class="item-content" id="user-type">
 	                    <div class="item-media"><i class="icon icon-form-name"></i></div>
 	                    <div class="item-inner">
 	                        <div class="item-title label">类型</div>
 	                        <div class="item-input">
-	                            <input type="text" placeholder="请选择注册类型" id='picker'>
+	                            <input type="text" placeholder="请选择用户类型" id='picker'>
 	                        </div>
-	                    </div>
-	                </div>
-	            </li>
-	            <li>
-	                <div class="item-content">
-	                    <div class="item-media"><i class="icon icon-form-email"></i></div>
-	                    <div class="item-inner">
-	                        <div class="item-title label">账号</div>
-	                        <div class="item-input">
-	                            <input id="account" type="text" placeholder="手机号码/用户ID">
-	                        </div>
+	                        <span class="icon icon-down" style="font-size: 0.5rem !important;"></span>
 	                    </div>
 	                </div>
 	            </li>
@@ -63,9 +50,9 @@
 	                <div class="item-content">
 	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
 	                    <div class="item-inner">
-	                        <div class="item-title label">密码</div>
+	                        <div class="item-title label">新密码</div>
 	                        <div class="item-input">
-	                            <input id="password" type="password" placeholder="" class="">
+	                            <input id="new-pwd" type="password" placeholder="请输入新密码" class="">
 	                        </div>
 	                    </div>
 	                </div>
@@ -82,44 +69,107 @@
 	                </div>
 	            </li>
 	        </ul>
-	        <div class="h1"></div>
-	        <div class="tc"><input type="checkbox" name="agree-protocol" id="agree-protocol"><label for="agree-protocol color-blue">点击查看<a class="inline" href="./uc_register_protocol.html">《注册协议》</a></label></div>
 	    </div>
 	    <div class="content-block">
 	        <div class="row">
-	            <div class="col-100"><a href="#" class="button button-big button-fill" id="login-btn">注册</a></div>
+	            <div class="col-100"><a href="javascript:" class="button button-big button-fill" id="save-btn">确定</a></div>
 	        </div>
 	    </div>
 	</form>
-
-	<div class="ps tc w-100" style="bottom:0.5rem;">
-		<img style="width:70%;" src="./img/regist_bottom.png">
-	</div>
 </div>
 <%- include('inc/js_load') %> 
 <script type="text/javascript">
 	$(function(){
-		var $login_form = $('#login-form');
-		$login_form.on('tap','#login-btn', function(){
-			if($.trim($('#account').val()) == ''){
-				$.toast("请输入账号");
-			}else if($.trim($('#password').val()) == ''){
-				$.toast("请输入密码");
+		$(document).on('click','#user-type', function () {
+		      var buttons1 = [
+		        {
+		          text: '请选择',
+		          label: true
+		        },
+		        {
+		          text: '信使',
+		          bold: true,
+		          color: 'danger',
+		          onClick: function() {
+		            
+		          }
+		        },
+		        {
+		          text: '商家',
+		          onClick: function() {
+		            
+		          }
+		        },
+		        {
+		          text: '服务商',
+		          onClick: function() {
+		            
+		          }
+		        },
+		        {
+		          text: '制造商',
+		          onClick: function() {
+		            
+		          }
+		        },
+		        {
+		          text: '贸易商',
+		          onClick: function() {
+		            
+		          }
+		        },
+		        {
+		          text: '零售商',
+		          onClick: function() {
+		            
+		          }
+		        }
+		      ];
+		      var buttons2 = [
+		        {
+		          text: '取消',
+		          bg: 'danger'
+		        }
+		      ];
+		      var groups = [buttons1, buttons2];
+		      $.actions(groups);
+	  	});
+		$('#save-btn').click(function(){
+			// verify
+			if(!$trim($('#mobile'))){
+				$.toast('请输入手机号码');
+				return false;
+			}else if(!$.trim($('#new-pwd'))){
+				$.toast('请输入新密码');
+				return false;
+			}else if(!$.trim($('#new-pwd2'))){
+				$.toast('请再次输入新密码');
+				return false;
+			}else if(!$.trim($('#new-pwd')) != !$.trim($('#new-pwd2'))){
+				$.toast('两次输入的密码不一致');
+				return false;
 			}
-			$.toast('hhh');
+			$('#save-form').submit();
 		});
-		$("#picker").picker({
-		  toolbarTemplate: '<header class="bar bar-nav">\
-		  <button class="button button-link pull-right close-picker">确定</button>\
-		  <h1 class="title">登录类型</h1>\
-		  </header>',
-		  cols: [
-		    {
-		      textAlign: 'center',
-		      values: ['信使', '信使', '信使', '信使']
-		    }
-		  ]
+		// get verify code
+		$('#get-verify-code').click(function(){
+			var verify_code = $.trim($('#verify-code').val());
+			if(!verify_code){
+				$.toas('请输入验证码');
+				return false;
+			}
+			$.ajax({
+				url:'',
+				method:'post',
+				dataType:'json',
+				data:{
+					code: verify_code,
+				},
+				success:function( ret ){
+
+				}
+			});
 		});
 	});
 </script>
-<%- include('inc/footer') %>
+<%- include('inc/footer') %> 

@@ -46,7 +46,7 @@
             	</a>
             </li>
             <li class="item-content item-link">
-            	<a href="./setting_logout.html">
+            	<a id="logout" href="javascript:">
 	                <div class="item-media"><i class="icon icon-f7"></i></div>
 	                <div class="item-inner">
 	                    <div class="item-title">退出</div>
@@ -60,7 +60,11 @@
 <%- include('inc/js_load') %> 
 <script type="text/javascript">
 	$(function(){
-		
+		$(document).on('click', '#logout',function () {
+	        $.alert('', '确定退出当前账号？', function () {
+	            //$.alert('Button clicked!')
+	        });
+	    });
 	});
 </script>
 <%- include('inc/footer') %>

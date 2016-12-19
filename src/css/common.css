@@ -15,6 +15,7 @@ ul > li{
 .rl{
 	position: relative;
 }
+.pr{position: relative;}
 .ps{
 	position: absolute;
 }
@@ -89,10 +90,12 @@ ul > li{
 /*.bg-red{
 	background-color: #cc2222;
 }*/
+.underline{text-decoration: underline;}
 
 .color-fff{color:#fff !important;}
 .color-666{color:#666 !important;}
 .color-red{color:#ee3333 !important;}
+.color-blue{color:#0894ec !important;}
 
 .f1{
 	font-size:0.7rem;
@@ -105,6 +108,7 @@ ul > li{
 .tl{text-align: left;}
 
 .fw-normal{font-weight: normal;}
+.fw-n{font-weight: normal;}
 
 /*溢出省略*/
 .nowrap{display: block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
@@ -115,6 +119,8 @@ ul > li{
 	visibility: none;
 
 }
+
+.line{height: 0;margin: 0.5rem 0; border-bottom: 1px solid #666;}
 /* @site base style end */
 /*---------------------------------------*/
 
@@ -139,5 +145,17 @@ a.active{
 .list-block{margin-top: 0 !important;}
 .list-block a{display: block;width:100%;}
 .item-inner{margin-left: 0 !important;}
+
+.m-title{line-height: 2rem;margin-left: 0.8rem;}
+.content-text{padding: 1rem;}
+
+.banner-tips-wrap{
+	left: 0;
+	top: 0;
+}
+
+.buttons-row{padding-bottom: 0.2rem; border-bottom: 1px solid #999;}
+.buttons-row a{color: #999 !important;border-color: rgba(0,0,0,0) !important;border-radius: 0 !important;}
+.buttons-row a.active{background-color: #cc2222 !important;color: #fff !important;}
 /* @site common style end 
 /*---------------------------------------*/
