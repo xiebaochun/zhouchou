@@ -104,7 +104,7 @@
 </div>
 <%- include('inc/js_load') %> 
 <script type="text/javascript">
-	//$(function(){
+	$(function(){
 		var $login_form = $('#login-form');
 		$login_form.on('tap','#login-btn', function(){
 			if($.trim($('#password').val()) == ''){
@@ -144,6 +144,6 @@
 		      var groups = [buttons1, buttons2];
 		      $.actions(groups);
 	  	});
-	//});
+	});
 </script>
 <%- include('inc/footer') %>

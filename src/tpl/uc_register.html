@@ -98,26 +98,28 @@
 </div>
 <%- include('inc/js_load') %> 
 <script type="text/javascript">
-	var $login_form = $('#login-form');
-	$login_form.on('tap','#login-btn', function(){
-		if($.trim($('#account').val()) == ''){
-			$.toast("请输入账号");
-		}else if($.trim($('#password').val()) == ''){
-			$.toast("请输入密码");
-		}
-		$.toast('hhh');
-	});
-	$("#picker").picker({
-	  toolbarTemplate: '<header class="bar bar-nav">\
-	  <button class="button button-link pull-right close-picker">确定</button>\
-	  <h1 class="title">登录类型</h1>\
-	  </header>',
-	  cols: [
-	    {
-	      textAlign: 'center',
-	      values: ['信使', '信使', '信使', '信使']
-	    }
-	  ]
+	$(function(){
+		var $login_form = $('#login-form');
+		$login_form.on('tap','#login-btn', function(){
+			if($.trim($('#account').val()) == ''){
+				$.toast("请输入账号");
+			}else if($.trim($('#password').val()) == ''){
+				$.toast("请输入密码");
+			}
+			$.toast('hhh');
+		});
+		$("#picker").picker({
+		  toolbarTemplate: '<header class="bar bar-nav">\
+		  <button class="button button-link pull-right close-picker">确定</button>\
+		  <h1 class="title">登录类型</h1>\
+		  </header>',
+		  cols: [
+		    {
+		      textAlign: 'center',
+		      values: ['信使', '信使', '信使', '信使']
+		    }
+		  ]
+		});
 	});
 </script>
 <%- include('inc/footer') %>

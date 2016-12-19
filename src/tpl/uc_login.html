@@ -66,7 +66,7 @@
 </div>
 <%- include('inc/js_load') %> 
 <script type="text/javascript">
-	//$(function(){
+	$(function(){
 		var $login_form = $('#login-form');
 		$login_form.on('tap','#login-btn', function(){
 			if($.trim($('#account').val()) == ''){
@@ -88,6 +88,6 @@
 		    }
 		  ]
 		});
-	//});
+	});
 </script>
 <%- include('inc/footer') %>
