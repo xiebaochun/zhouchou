@@ -70,16 +70,16 @@
 	$(function(){
 		$('#save-btn').click(function(){
 			// verify
-			if(!$.trim($('#origin-pwd'))){
+			if(!$.trim($('#origin-pwd').val())){
 				$.toast('请输入原二级密码');
 				return false;
-			}else if(!$.trim($('#new-pwd'))){
+			}else if(!$.trim($('#new-pwd').val())){
 				$.toast('请输入新二级密码');
 				return false;
-			}else if(!$.trim($('#new-pwd2'))){
+			}else if(!$.trim($('#new-pwd2').val())){
 				$.toast('请再次输入新二级密码');
 				return false;
-			}else if(!$.trim($('#new-pwd')) != !$.trim($('#new-pwd2'))){
+			}else if(!$.trim($('#new-pwd').val()) != !$.trim($('#new-pwd2').val())){
 				$.toast('两次输入的二级密码不一致');
 				return false;
 			}
