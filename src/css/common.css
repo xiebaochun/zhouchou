@@ -86,6 +86,7 @@ ul > li{
 	background-color: #dddd99;
 }
 
+.bg-eee{background-color: #eee !important;}
 .bg-fff{
 	background-color: #fff;
 }
@@ -140,6 +141,7 @@ a.active{
 }
 
 .tips-wrap{
+	margin-top:3rem;
 	text-align: center;
 }
 .tips-wrap img{
