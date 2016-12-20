@@ -1,0 +1,89 @@
+<%- include('inc/head') %>
+<style type="text/css">
+	.card-left{
+		float: left;
+		height: 4rem;
+		width:33%;
+		padding-top:0.6rem;
+		background-image: url(./img/rewar_lss_bg_left.png);
+		background-size: 100% 100%;
+		text-align: center;
+		color:#fff;
+		box-sizing: border-box;
+	}
+	.card-right{
+		float: left;
+		width:66%;
+		height: 4rem;
+		padding-top:0.6rem;
+		background-image: url(./img/reward_lss_bg_right.png);
+		background-size: 100% 100%;	
+		text-align: center;
+		color:#fff;
+		box-sizing: border-box;
+	}
+	.content-padded{padding:0.5rem 0;line-height: 2rem;}
+</style>
+<header class="bar bar-nav bg-cover main-bg-1">
+	<a class="button button-link button-nav pull-left back">
+        <span class="icon icon-left color-fff"></span>
+    </a>
+    <h1 class="title color-fff">当日激励详情</h1>
+</header>
+<div class="content bg-fff">
+	<div class="h1"></div>
+	<div>
+		<div class="clearfix">
+			<div class="card-left">
+				<span>零售商</span><br>
+				<span>昨日激励</span>
+			</div>
+			<div class="card-right">
+				<span style="font-size:1.5rem;">0.00</span><span>颗</span><br>
+				<span>激励信使豆</span>
+			</div>
+		</div>
+		<div class="content-padded grid-demo tc">
+		    <div class="row">
+		      <div class="col-50">激励模式</div>
+		      <div class="col-50">信使豆</div>
+		    </div>
+		    <div class="row">
+		      <div class="col-50">50%</div>
+		      <div class="col-50">50%</div>
+		    </div>
+		    <div class="row">
+		      <div class="col-50">50%</div>
+		      <div class="col-50">50%</div>
+		    </div>
+		</div>
+	</div>
+	<div>
+		<div class="clearfix">
+			<div class="card-left" style="background-image: url(./img/rewar_bg_left.png);color:#cc2222;">
+				<span>商家</span><br>
+				<span>昨日激励</span>
+			</div>
+			<div class="card-right" style="background-image: url(./img/reward_bg_right.png);color:#cc2222;">
+				<span style="font-size:1.5rem;">0.00</span><span>颗</span><br>
+				<span>激励信使豆</span>
+			</div>
+		</div>
+		<div class="content-padded grid-demo tc">
+		    <div class="row">
+		      <div class="col-50">激励模式</div>
+		      <div class="col-50">信使豆</div>
+		    </div>
+		    <div class="row">
+		      <div class="col-50">50%</div>
+		      <div class="col-50">50%</div>
+		    </div>
+		    <div class="row">
+		      <div class="col-50">50%</div>
+		      <div class="col-50">50%</div>
+		    </div>
+		</div>
+	</div>
+</div>
+<%- include('inc/js_load') %> 
+<%- include('inc/footer') %> 
