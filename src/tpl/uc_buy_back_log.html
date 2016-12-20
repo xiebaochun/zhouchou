@@ -1,18 +1,28 @@
 <%- include('inc/head') %>
-<link rel="stylesheet" type="text/css" href="./css/love_comsuption.css">
+<style type="text/css">
+	.banner-tips-wrap{
+		padding-top: 1.5rem;
+	}
+</style>
 <header class="bar bar-nav bg-cover main-bg-1">
-    <h1 class="title color-fff" id="header-filter">爱心消费<span class="icon icon-down" style="font-size:0.5rem !important;"></span></h1>
+	<a class="button button-link button-nav pull-left back">
+        <span class="icon icon-left color-fff"></span>
+    </a>
+    <h1 class="title color-fff">回购记录</h1>
+    <a class="button button-link button-nav pull-right" id="header-filter">
+        <span class="color-fff">筛选</span>
+        <span class="icon icon-down color-fff" style="font-size:0.5rem !important;"></span>
+    </a>
 </header>
 <div class="content">
     <div class="buttons-tab">
-        <a href="#tab1" class="tab-link active button">全部</a>
-        <a href="#tab2" class="tab-link button">待付款</a>
-        <a href="#tab3" class="tab-link button">待发货</a>
+        <a href="#tab1" class="tab-link active button">回购完成</a>
+        <a href="#tab2" class="tab-link button">回购申请中</a>
+        <a href="#tab3" class="tab-link button">回购是失败</a>
     </div>
     <div class="content-block">
         <div class="tabs">
             <div id="tab1" class="tab active">
-                <img class="w-100" src="./img/mylove_bg.png">
                 <div class="content-block">
                     <p>This is tab 1 content</p>
                     <div class="tips-wrap">
@@ -35,7 +45,6 @@
         </div>
     </div>
 </div>
-<%- include('inc/bottom_nav') %> 
 <%- include('inc/js_load') %> 
 <script type="text/javascript">
 	$(function(){
@@ -46,23 +55,35 @@
 		          label: true
 		        },
 		        {
-		          text: '全部',
+		          text: '近7天',
 		          bold: true,
 		          color: 'danger',
 		          onClick: function() {
-		            $.alert("你选择了“全部“");
+		           
 		          }
 		        },
 		        {
-		          text: '零售商',
+		          text: '近一个月',
 		          onClick: function() {
-		            $.alert("你选择了“零售商“");
+		            
 		          }
 		        },
 		        {
-		          text: '商家',
+		          text: '近3个月',
 		          onClick: function() {
-		            $.alert("你选择了“商家“");
+		            
+		          }
+		        },
+		        {
+		          text: '近半年',
+		          onClick: function() {
+		            
+		          }
+		        },
+		        {
+		          text: '全部',
+		          onClick: function() {
+		            
 		          }
 		        }
 		      ];
@@ -77,4 +98,4 @@
 	  	});
 	});
 </script>
-<%- include('inc/footer') %>
+<%- include('inc/footer') %> 

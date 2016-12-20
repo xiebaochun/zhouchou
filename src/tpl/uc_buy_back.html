@@ -1,0 +1,116 @@
+<%- include('inc/head') %>
+<link rel="stylesheet" type="text/css" href="./css/login.css">
+<header class="bar bar-nav bg-cover main-bg-1">
+	<a class="button button-link button-nav pull-left back">
+        <span class="icon icon-left color-fff"></span>
+    </a>
+    <h1 class="title color-fff">我要回购</h1>
+    <a class="button button-link button-nav pull-right color-fff" href="./uc_buy_back_log.html">回购记录</a>
+</header>
+<div class="content">
+	<form id="form" action="" target="">
+	    <div class="content-block">
+	    	<h5 class="tc">回购须知</h5>
+		    <p>
+		    	1、目前回购只支持建设银行。<br>
+		    	2、单笔最多回购5000信使豆。<br>
+		    	3、单笔回购扣除手续费5颗信使豆。<br>
+		    </p>
+	    </div>
+	    <div class="tc bg-fff" style="padding:0.5rem 0;border-top:1px solid #999;border-bottom:1px solid #999;">
+	    	<img src="./img/huigou_add.png"><br>
+	    	<span>添加银行卡</span>
+	    </div>
+	    <div class="list-block">
+	        <ul>
+	            <!-- Text inputs -->
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-name"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">回购类型</div>
+	                        <div class="item-input">
+	                            <input type="text" placeholder="请选择回购类型" id='picker' disabled>
+	                        </div>
+	                        <span class="icon icon-down pull-right"></span>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">回购信使豆</div>
+	                        <div class="item-input">
+	                            <input id="xinshi-account" type="text" placeholder="请输入信使豆数量" class="">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="item-content">
+	                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+	                    <div class="item-inner">
+	                        <div class="item-title label">二级密码</div>
+	                        <div class="item-input">
+	                            <input id="password2" type="password" placeholder="请输入二级密码" class="">
+	                        </div>
+	                    </div>
+	                </div>
+	            </li>
+	        </ul>
+	        <div class="h1"></div>
+	    </div>
+	    <div class="content-block">
+	        <div class="row">
+	            <div class="col-100"><a href="#" class="button button-big button-fill" id="login-btn">确定</a></div>
+	        </div>
+	    </div>
+	</form>
+</div>
+<%- include('inc/js_load') %> 
+<script type="text/javascript">
+	$(function(){
+		var $form = $('#form');
+		$form.on('click','#login-btn', function(){
+			if(!$.trim($('#picker').val())){
+				$.toast('请选择直捐类型');
+			}else if($.trim($('#xinshi-dou').val()) == ''){
+				$.toast("请输入信使豆数量");
+			}else if($.trim($('#password2').val()) == ''){
+				$.toast("请输入二级密码");
+			}
+		});
+		$(document).on('click','#picker', function () {
+			var self = this;
+		    var buttons1 = [
+		        {
+		          text: '请选择',
+		          label: true
+		        },
+		        {
+		          text: '普通信使豆',
+		          bold: true,
+		          onClick: function() {
+		           	$(self).val('普通信使豆');
+		          }
+		        },
+		        {
+		          text: '代缴税信使豆',
+		          onClick: function() {
+		            $(self).val('代缴税信使豆');
+		          }
+		        }
+		      ];
+		      var buttons2 = [
+		        {
+		          text: '取消',
+		          bg: 'danger'
+		        }
+		      ];
+		      var groups = [buttons1, buttons2];
+		      $.actions(groups);
+	  	});
+	});
+</script>
+<%- include('inc/footer') %>

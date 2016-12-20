@@ -43,6 +43,8 @@ ul > li{
 .h1{
 	height: 1rem;
 }
+.h2{height: 2rem;}
+.h3{height: 3rem;}
 
 .blank-1{height:1rem;}
 .blank-2{height:2rem;}
