@@ -8,7 +8,7 @@
     <a class="button button-link button-nav pull-right color-fff" href="./uc_directly_donation_log.html">直捐记录</a>
 </header>
 <div class="content">
-	<form id="login-form" action="" target="">
+	<form id="form" action="" target="">
 	    <div class="content-block">
 		    <div class="tc">
 		        <img class="" style="width:70%;" src="./img/regist_bottom.png">
@@ -31,7 +31,7 @@
 	                    <div class="item-inner">
 	                        <div class="item-title label">直捐类型</div>
 	                        <div class="item-input">
-	                            <input type="text" placeholder="请选择直捐类型" id='picker'>
+	                            <input type="text" placeholder="请选择直捐类型" id='picker' disabled>
 	                        </div>
 	                    </div>
 	                </div>
@@ -105,17 +105,19 @@
 <%- include('inc/js_load') %> 
 <script type="text/javascript">
 	$(function(){
-		var $login_form = $('#login-form');
-		$login_form.on('tap','#login-btn', function(){
-			if($.trim($('#password').val()) == ''){
+		var $form = $('#form');
+		$form.on('click','#login-btn', function(){
+			if(!$.trim($('#picker').val())){
+				$.toast('请选择直捐类型');
+			}else if($.trim($('#password').val()) == ''){
 				$.toast("请输入密码");
 			}else if($.trim($('#password2').val()) == ''){
 				$.toast("请输入二级密码");
 			}
-			$.toast('hhh');
 		});
 		$(document).on('click','#picker', function () {
-		      var buttons1 = [
+			var self = this;
+		    var buttons1 = [
 		        {
 		          text: '请选择',
 		          label: true
@@ -123,15 +125,14 @@
 		        {
 		          text: '普通信使豆',
 		          bold: true,
-		          color: 'danger',
 		          onClick: function() {
-		           
+		           	$(self).val('普通信使豆');
 		          }
 		        },
 		        {
 		          text: '代缴税信使豆',
 		          onClick: function() {
-		            
+		            $(self).val('代缴税信使豆');
 		          }
 		        }
 		      ];
