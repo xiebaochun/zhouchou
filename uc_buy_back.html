@@ -17,7 +17,11 @@
   <body>
     <div class="page-group">
         <div class="page page-current">
-<link rel="stylesheet" type="text/css" href="./css/login.css">
+<style type="text/css">
+	.buy-back-notice-content{
+		font-size:0.7rem;
+	}
+</style>
 <header class="bar bar-nav bg-cover main-bg-1">
 	<a class="button button-link button-nav pull-left back">
         <span class="icon icon-left color-fff"></span>
@@ -27,18 +31,20 @@
 </header>
 <div class="content">
 	<form id="form" action="" target="">
-	    <div class="content-block">
-	    	<h5 class="tc">回购须知</h5>
-		    <p>
+	    <div class="content-block" style="margin:0.5rem 0;">
+	    	<h4 class="tc">回购须知</h4>
+		    <p class="buy-back-notice-content">
 		    	1、目前回购只支持建设银行。<br>
 		    	2、单笔最多回购5000信使豆。<br>
 		    	3、单笔回购扣除手续费5颗信使豆。<br>
 		    </p>
 	    </div>
-	    <div class="tc bg-fff" style="padding:0.5rem 0;border-top:1px solid #999;border-bottom:1px solid #999;">
-	    	<img src="./img/huigou_add.png"><br>
-	    	<span>添加银行卡</span>
-	    </div>
+	    <a href="./uc_my_banks.html">
+	    	<div class="tc bg-fff" style="padding:0.5rem 0;border-top:1px solid #999;border-bottom:1px solid #999;">
+		    	<img src="./img/huigou_add.png"><br>
+		    	<span>添加银行卡</span>
+		    </div>
+	    </a>
 	    <div class="list-block">
 	        <ul>
 	            <!-- Text inputs -->
