@@ -1,5 +1,5 @@
 header.bar-nav{
-	background-image:url(../img/main_title_bg.png);
+	_background-image:url(../img/main_title_bg.png);
 }
 .content{
 	background-image: url(../img/main_center_bg.jpg);
@@ -12,6 +12,7 @@ header.bar-nav{
 }
 .swiper-slide{
 	text-align: center;
+	border-radius: 0.3rem;
 }
 .bottom-nav{
 	position: fixed;

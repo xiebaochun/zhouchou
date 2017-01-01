@@ -1,0 +1,130 @@
+<%- include('inc/head') %>
+<style type="text/css">
+	.bank-list{
+		min-height: 20rem;
+	}
+</style>
+<header class="bar bar-nav bg-cover main-bg-1">
+	<a class="button button-link button-nav pull-left back">
+        <span class="icon icon-left color-fff"></span>
+    </a>
+    <h1 class="title color-fff">添加银行卡</h1>
+</header>
+<div class="content">
+	<form>
+		<div class="list-block">
+			<div>
+		        <ul>
+		            <!-- Text inputs -->
+		            <li>
+		                <div class="item-content">
+		                    <div class="item-media"><i class="icon icon-form-name"></i></div>
+		                    <div class="item-inner">
+		                        <div class="item-title label">持卡人</div>
+		                        <div class="item-input">
+		                            <span class="holder">李某某</span>
+		                        </div>
+		                    </div>
+		                </div>
+		            </li>
+		            <li>
+		                <div class="item-content">
+		                    <div class="item-inner">
+		                        <div class="item-title label">转入银行</div>
+		                        <div class="item-input" id="transfer-in-bank-wrap">
+		                            <input id="transfer-in-bank" type="text" value="中国建设银行" placeholder="">
+		                        </div>
+		                        <span class="icon icon-down"></span>
+		                    </div>
+		                </div>
+		            </li>
+		            <li>
+		                <div class="item-content">
+		                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+		                    <div class="item-inner">
+		                        <div class="item-title label">卡号</div>
+		                        <div class="item-input">
+		                            <input id="bank-number" type="text" placeholder="请输入银行卡号" class="">
+		                        </div>
+		                    </div>
+		                </div>
+		            </li>   
+		        </ul>
+		    </div>
+		</div>
+	    <div class="content-block">
+	        <div class="row">
+	            <div class="col-100"><a href="#" class="button button-big button-fill" id="ensure-btn">确定</a></div>
+	        </div>
+	    </div>
+	</form>
+</div>
+<%- include('inc/js_load') %> 
+<script type="text/javascript">
+	$(function(){
+		var $form = $('#form');
+		$form.on('click','#ensure-btn', function(){
+			if(!$.trim($('#ptransfer-in-bank').val())){
+				$.toast('请选择转入的银行卡');
+			}else if($.trim($('#bank-number').val()) == ''){
+				$.toast("请输入卡号");
+			}
+			$form.submit();
+		});
+		$(document).on('click','#transfer-in-bank-wrap', function () {
+			var self = $(this).children('input');
+		    var buttons1 = [
+		        {
+		          text: '请选择',
+		          label: true
+		        },
+		        {
+		          text: '中国建设银行',
+		          bold: true,
+		          onClick: function() {
+		           	$(self).val('中国建设银行');
+		          }
+		        },
+		        {
+		          text: '中国工商银行',
+		          onClick: function() {
+		            $(self).val('中国工商银行');
+		          }
+		        },
+		        {
+		          text: '中国银行',
+		          onClick: function() {
+		            $(self).val('中国银行');
+		          }
+		        },
+		        {
+		          text: '中国农业银行',
+		          onClick: function() {
+		            $(self).val('中国农业银行');
+		          }
+		        },
+		        {
+		          text: '平安银行',
+		          onClick: function() {
+		            $(self).val('平安银行');
+		          }
+		        },
+		        {
+		          text: '交通银行',
+		          onClick: function() {
+		            $(self).val('交通银行');
+		          }
+		        }
+		      ];
+		      var buttons2 = [
+		        {
+		          text: '取消',
+		          bg: 'danger'
+		        }
+		      ];
+		      var groups = [buttons1, buttons2];
+		      $.actions(groups);
+	  	});
+	});
+</script>
+<%- include('inc/footer') %>
