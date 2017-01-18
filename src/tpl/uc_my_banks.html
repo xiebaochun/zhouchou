@@ -1,8 +1,14 @@
 <%- include('inc/head') %>
 <style type="text/css">
-	.bank-list{
-		min-height: 20rem;
+	.bank-list{min-height: 20rem;}
+	.bank-item{position: relative;height: 4rem;background-color: #fff;}
+	.bank-card-info{margin: 0; padding-right: 0.5rem;}
+	.bank-ico-wrap{position: relative;height: 100%;}
+	.bank-ico{width: 2.5rem;}
+	.select-ico{float: right;display: none;width: 2rem;margin-top: 0.5rem;margin-left: 0.5rem;}
+	.bank-card-check{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 4rem;visibility: 0;opacity: 0;z-index: 1;
 	}
+	.bank-card-check:checked + div .select-ico{display: block !important;}
 </style>
 <header class="bar bar-nav bg-cover main-bg-1">
 	<a class="button button-link button-nav pull-left back">
@@ -12,19 +18,55 @@
     <a class="button button-link button-nav pull-right color-fff" style="font-size: 1.5rem;margin-right: 0.2rem;" href="./uc_add_bank.html">+</a>
 </header>
 <div class="content">
-	<div class="bank-list">
-		
-	</div>
+	<ul class="bank-list">
+		<li class="row bottom-line bank-item pr">
+			<div class="bank-ico-wrap col-20 tr">
+				<span class="vm-helper"></span>
+				<img class="bank-ico vc" src="http://img0.imgtn.bdimg.com/it/u=96442736,3590983864&fm=23&gp=0.jpg">
+			</div>
+			<input class="bank-card-check" type="radio" name="bank_card" value="1">
+			<div class="col-80 inline-block color-666 pr h-100"> 
+				<div class="bank-card-info vc" style="width: 100%;">
+					<img class="select-ico" src="./img/zhijuan_success.png">
+					中国建设银行 中国广州市天河区五山中国建设银行五山支
+					<br/>
+					535874354375943
+				</div>
+			</div>
+		</li>
+		<li class="row bottom-line bank-item pr">
+			<div class="bank-ico-wrap col-20 tr">
+				<span class="vm-helper"></span>
+				<img class="bank-ico vc" src="http://img0.imgtn.bdimg.com/it/u=96442736,3590983864&fm=23&gp=0.jpg">
+			</div>
+			<input class="bank-card-check" type="radio" name="bank_card" value="2">
+			<div class="col-80 inline-block color-666 pr h-100"> 
+				<div class="bank-card-info vc" style="width: 100%;">
+					<img class="select-ico" src="./img/zhijuan_success.png">
+					中国建设银行 中国广州市天河区五山中国建设银行五山支
+					<br/>
+					535874354375943
+				</div>
+			</div>
+		</li>
+	</ul>
     <div class="content-block">
         <div class="row">
-            <div class="col-100"><a href="#" class="button button-big button-fill" id="login-btn">确定</a></div>
+            <div class="col-100"><a href="#" class="button button-big button-fill" id="ensure-btn">确定</a></div>
         </div>
     </div>
 </div>
 <%- include('inc/js_load') %> 
 <script type="text/javascript">
 	$(function(){
-		
+		var $body = $('body');
+		$body.click(function(){
+			//console.log(bank_card);
+		});
+		$body.on('click', '#ensure-btn', function(){
+			var bank_card = $("input[name='bank_card']:checked").val();
+			console.log(bank_card);
+		});
 	});
 </script>
 <%- include('inc/footer') %>
