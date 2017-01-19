@@ -154,6 +154,9 @@ ul > li{
 body{
 	font-size: 0.75rem;
 }
+.page, .page-group{
+	background-color: #f2f2f2;
+}
 a{
 	color: #333;
 }
@@ -187,12 +190,28 @@ a.active{
 	top: 0;
 }
 
+/*列表项*/
+.item{padding: 0.5rem 1rem;}
+
 /*bottom line 底部线条*/
 .bottom-line{position: relative;}
 .bottom-line:after{content:'';display: block;position: absolute; height: 1px; width:100%;bottom: 0;left: 0;background-color: #eee;}
 
+.bottom-line-999{position: relative;}
+.bottom-line-999:after{content:'';display: block;position: absolute; height: 1px; width:100%;bottom: 0;left: 0;background-color: #999;}
+
+
+
 .buttons-row{padding-bottom: 0.2rem; border-bottom: 1px solid #999;}
 .buttons-row a{color: #999 !important;border-color: rgba(0,0,0,0) !important;border-radius: 0 !important;}
 .buttons-row a.active{background-color: #cc2222 !important;color: #fff !important;}
+
+/*tag 标签*/
+.business-type{
+	padding: 0 0.1rem;
+	color: #fff;
+	background-color: #0894ec;
+	border-radius: 0.2rem;
+}
 /* @site common style end 
 /*---------------------------------------

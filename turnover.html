@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的生活</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+
+  </head>
+  <body>
+    <div class="page-group">
+        <div class="page page-current">
+<style type="text/css">
+	.item{padding: 0.5rem;}
+	.turnover-item{}
+	.turnover-item .item{padding: 0.2rem 0;}
+	.level{height: 0.8rem;}
+</style>
+<header class="bar bar-nav bg-cover main-bg-1">
+	<a class="button button-link button-nav pull-left back">
+        <span class="icon icon-left color-fff"></span>
+    </a>
+    <h1 class="title color-fff">商家营业额</h1>
+    <a class="button button-link button-nav pull-right" id="header-filter">
+        <span class="color-fff">筛选</span>
+        <span class="icon icon-down color-fff" style="font-size:0.5rem !important;"></span>
+    </a>
+</header>
+<div class="content">
+	<div class="buttons-tab">
+	    <a href="#tab1" class="tab-link active button">我的商家</a>
+	    <a href="#tab2" class="tab-link button">业务员的商家</a>
+	</div>
+
+    <div class="tabs">
+        <div id="tab1" class="tab active">
+            <div class="item bottom-line-999">
+				<span>营业额合计:5345345.0元</span>
+			</div>
+			<ul class="turnover-list bg-fff">
+				<li class="item turnover-item bottom-line">
+					<div class="item">
+						<h3>福建沙县小吃店</h3>
+					</div>
+					<div class="item">
+						<img class="vm level" src="./img/main_star3.png">
+						<span class="vm">DL4534543</span>
+						<span class="pull-right business-type">零售商</span>
+					</div>
+					<div class="item">
+						<span class="color-red-active">营业额：598374元</span>
+						<span class="pull-right">2017-01-12</span>
+					</div>
+				</li>
+				<li class="item turnover-item bottom-line">
+					<div class="item">
+						<h3>福建沙县小吃店</h3>
+					</div>
+					<div class="item">
+						<img class="vm level" src="./img/main_star3.png">
+						<span class="vm">DL4534543</span>
+						<span class="pull-right business-type">零售商</span>
+					</div>
+					<div class="item">
+						<span class="color-red-active">营业额：598374元</span>
+						<span class="pull-right">2017-01-12</span>
+					</div>
+				</li>
+				<li class="item turnover-item bottom-line">
+					<div class="item">
+						<h3>福建沙县小吃店</h3>
+					</div>
+					<div class="item">
+						<img class="vm level" src="./img/main_star3.png">
+						<span class="vm">DL4534543</span>
+						<span class="pull-right business-type">零售商</span>
+					</div>
+					<div class="item">
+						<span class="color-red-active">营业额：598374元</span>
+						<span class="pull-right">2017-01-12</span>
+					</div>
+				</li>
+			</ul>
+        </div>
+        <div id="tab2" class="tab">
+            <div class="item bottom-line-999">
+				<span>营业额合计:888888.0元</span>
+			</div>
+			<ul class="turnover-list bg-fff">
+				<li class="item turnover-item bottom-line">
+					<div class="item">
+						<h3>福建沙县小吃店</h3>
+					</div>
+					<div class="item">
+						<img class="vm level" src="./img/main_star3.png">
+						<span class="vm">DL4534543</span>
+						<span class="pull-right business-type">零售商</span>
+					</div>
+					<div class="item">
+						<span class="color-red-active">营业额：598374元</span>
+						<span class="pull-right">2017-01-12</span>
+					</div>
+				</li>
+				<li class="item turnover-item bottom-line">
+					<div class="item">
+						<h3>福建沙县小吃店</h3>
+					</div>
+					<div class="item">
+						<img class="vm level" src="./img/main_star3.png">
+						<span class="vm">DL4534543</span>
+						<span class="pull-right business-type">零售商</span>
+					</div>
+					<div class="item">
+						<span class="color-red-active">营业额：598374元</span>
+						<span class="pull-right">2017-01-12</span>
+					</div>
+				</li>
+			</ul>
+        </div>
+    </div>
+
+    <div class="business">
+    	
+    </div>
+</div>
+		</div>
+	</div>
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type="text/javascript">
+	$.config = {router: false};
+</script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script type="text/javascript" src="./js/common.js?20161219"></script> 
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click','#header-filter', function () {
+		      var buttons1 = [
+		        {
+		          text: '请选择',
+		          label: true
+		        },
+		        {
+		          text: '近7天',
+		          bold: true,
+		          color: 'danger',
+		          onClick: function() {
+		           
+		          }
+		        },
+		        {
+		          text: '近一个月',
+		          onClick: function() {
+		            
+		          }
+		        },
+		        {
+		          text: '近3个月',
+		          onClick: function() {
+		            
+		          }
+		        },
+		        {
+		          text: '近半年',
+		          onClick: function() {
+		            
+		          }
+		        },
+		        {
+		          text: '全部',
+		          onClick: function() {
+		            
+		          }
+		        }
+		      ];
+		      var buttons2 = [
+		        {
+		          text: '取消',
+		          bg: 'danger'
+		        }
+		      ];
+		      var groups = [buttons1, buttons2];
+		      $.actions(groups);
+	  	});
+	});
+</script>
+
+  	</body>
+</html> 
