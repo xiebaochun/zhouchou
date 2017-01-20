@@ -74,6 +74,8 @@ ul > li{
 	transform: translate(-50%, -50%);
 }
 
+.vb{vertical-align: bottom;}
+
 .l1{
 	line-height: 1rem;
 }
