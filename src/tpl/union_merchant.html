@@ -9,6 +9,27 @@
 	.swiper-slide{
 		width: 100%;
 	}
+	.swiper-slide .row{
+		padding: 0;
+		margin: 0;
+	}
+	.swiper-slide .col-25{
+		width: 25%;
+		min-height: 4.3rem;
+		padding: 0.5rem 0;
+		margin: 0;
+		line-height: 1rem;
+		text-align: center;
+		border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+	.swiper-slide .col-25 img{
+		display: inline-block;
+		width: 2rem;
+	}
+	.swiper-pagination-bullet-active{
+		background-color: #cc2222;
+	}
 </style>
 <header class="bar bar-nav bg-cover main-bg-1">
 	<a class="button button-link button-nav pull-left back">
@@ -22,58 +43,46 @@
 	        <div class="swiper-slide">
 	        	<div class="row">
 	        		<div class="col-25">
-	        			test
+	        			<img src="./img/icon_shlx.png">
+	        			<br/>
+	        			<a href="">美食</a>
 	        		</div>
 	        		<div class="col-25">
-	        			test
+	        			<img src="./img/icon_shlx.png">
+	        			<br/>
+	        			<a href="">美食</a>
 	        		</div>
 	        		<div class="col-25">
-	        			test
+	        			<img src="./img/icon_shlx.png">
+	        			<br/>
+	        			<a href="">美食</a>
 	        		</div>
 	        		<div class="col-25">
-	        			test
+	        			<img src="./img/icon_shlx.png">
+	        			<br/>
+	        			<a href="">美食</a>
 	        		</div>
 	        	</div>
 	        	<div class="row">
 	        		<div class="col-25">
-	        			test
+	        			<img src="./img/icon_shlx.png">
+	        			<br/>
+	        			<a href="">美食</a>
 	        		</div>
 	        		<div class="col-25">
-	        			test
+	        			<img src="./img/icon_shlx.png">
+	        			<br/>
+	        			<a href="">美食</a>
 	        		</div>
 	        		<div class="col-25">
-	        			test
+	        			<img src="./img/icon_shlx.png">
+	        			<br/>
+	        			<a href="">美食</a>
 	        		</div>
 	        		<div class="col-25">
-	        			test
-	        		</div>
-	        	</div>
-				<div class="row">
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        	</div>
-				<div class="row">
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
+	        			<img src="./img/icon_shlx.png">
+	        			<br/>
+	        			<a href="">美食</a>
 	        		</div>
 	        	</div>
 	        </div>
@@ -106,34 +115,6 @@
 	        			test
 	        		</div>
 	        	</div>
-				<div class="row">
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        	</div>
-				<div class="row">
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        	</div>
 	        </div>
 	        <div class="swiper-slide">
 	        	<div class="row">
@@ -151,34 +132,6 @@
 	        		</div>
 	        	</div>
 	        	<div class="row">
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        	</div>
-				<div class="row">
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        		<div class="col-25">
-	        			test
-	        		</div>
-	        	</div>
-				<div class="row">
 	        		<div class="col-25">
 	        			test
 	        		</div>
@@ -202,7 +155,7 @@
 	$(function(){
 		$(".swiper-container").swiper({
 	        //autoplay:5000,
-	        effect:'cube'
+
 	    });
 	});
 </script>
