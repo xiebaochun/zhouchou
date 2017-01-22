@@ -227,5 +227,20 @@ a.active{
 	background-color: #0894ec;
 	border-radius: 0.2rem;
 }
+
+/*seller list 商家列表*/
+.seller-list .item{padding: 0;}
+.seller-list .seller-item a{display: block; padding: 0.5rem 0;}
+
+.seller-list .seller-img{width: 6rem;margin: 0 0.5rem;}
+.seller-list .seller-level{height: 1rem;}
+.seller-list .seller-snapshot{
+
+}
+.seller-list .seller-addr{padding: 0.5rem 0;}
+.seller-list .seller-info{}
+.seller-list .seller-info > div{
+	
+}
 /* @site common style end 
 /*---------------------------------------
