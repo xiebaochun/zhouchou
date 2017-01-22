@@ -121,6 +121,7 @@ ul > li{
 .color-red-active{color: #cc2222 !important;}
 .color-blue{color:#0894ec !important;}
 .color-green{color: #559955 !important;}
+.color-pink{color: #ee9999 !important;}
 
 .f1-2{font-size: .5rem;}
 .f1{
@@ -137,6 +138,7 @@ ul > li{
 
 .fw-normal{font-weight: normal;}
 .fw-n{font-weight: normal;}
+.bolder{font-weight: bolder;}
 
 /*溢出省略*/
 .nowrap{display: block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
@@ -209,7 +211,7 @@ a.active{
 
 /*bottom line 底部线条*/
 .bottom-line{position: relative;}
-.bottom-line:after{content:'';display: block;position: absolute; height: 1px; width:100%;bottom: 0;left: 0;background-color: #eee;}
+.bottom-line:after{content:'';display: block;position: absolute; height: 1px; width:100%;bottom: 0;left: 0;background-color: #e2e2e2;}
 
 .bottom-line-999{position: relative;}
 .bottom-line-999:after{content:'';display: block;position: absolute; height: 1px; width:100%;bottom: 0;left: 0;background-color: #999;}

@@ -1,0 +1,71 @@
+<!-- tpl1 -->
+<%- include('inc/head') %>
+<style type="text/css">
+	.item{
+		padding: 0.5rem 0.5rem;
+		padding-left: 0;
+		line-height: 1.5rem;
+	}
+	.item .icon{
+		height: 2rem;
+	}
+	.seller-logo{
+		width: 5rem;
+	}
+	.seller-level{
+		height: 1rem;
+	}	
+</style>
+<header class="bar bar-nav bg-cover main-bg-1">
+	<a class="button button-link button-nav pull-left back">
+        <span class="icon icon-left color-fff"></span>
+    </a>
+    <h1 class="title color-fff">详情页</h1>
+</header>
+<div class="content">
+	<div class="bg-fff" style="padding-left: 0.5rem;border-bottom: 2px solid #ccc;">
+		<div class="seller-header item bottom-line">
+			<img class="seller-logo" src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C10%2C1021%2C618%3Bw%3D720%3Bq%3D80/sign=5650fb518ab1cb132a266653e0647a7f/f9198618367adab428158bfd8cd4b31c8601e443.jpg">
+			<div class="inline-block item" style="padding-left: 0.5rem;">
+				<span class="f2 bolder" style="line-height: 2.5rem;">时尚空间餐饮</span><br/>
+				<img class="seller-level" src="./img/main_star3.png">
+			</div>
+		</div>
+		<div class="item">
+			<div style="padding-left: 0.3rem;">
+				<img class="inline-block vm icon" src="./img/location_icon.png">
+				&nbsp;
+				<span class="vm">北京市海淀区</span>
+			</div>
+			<div style="margin-top: 0.5rem;padding-left: 0.3rem;">
+				<img class="inline-block vm icon" src="./img/phone_icon.png">
+				&nbsp;
+				<span class="vm">010-62894379</span>
+			</div>
+		</div>
+	</div>
+	<div class="bg-fff" style="padding-left: 0.5rem;">
+		<div class="item bottom-line">
+			<img  class="vm" src="./img/merchant_default.png">
+			<span class="vm" >商家详情</span>
+		</div>
+		<div class="item bottom-line">
+			<div>商家类型</div>
+			<span class="f1-2">零售商</span>
+		</div>
+		<div class="item bottom-line">
+			<div>营业时间</div>
+			<span class="f1-2">09:00~22:00</span>
+		</div>
+		<div class="item bottom-line">
+			<div>主营业务</div>
+			<span class="f1-2">餐饮服务</span>
+		</div>
+		<div class="item bottom-line">
+			<div>简介</div>
+			<span class="f1-2">餐饮服务</span>
+		</div>
+	</div>
+</div>
+<%- include('inc/js_load') %> 
+<%- include('inc/footer') %> 
