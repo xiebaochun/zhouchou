@@ -17,6 +17,7 @@ gulp.task('watch',function(){
     //     .pipe(changeF)
     //     .pipe(gulp.dest('build'));
     gulp.watch(['./src/*/*.{html,md,css,js}'], ['build']);
+    gulp.watch(['./src/*/*/*.{html,md,css,js}'], ['build']);
   
 });
 
